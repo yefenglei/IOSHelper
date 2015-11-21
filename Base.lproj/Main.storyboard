@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e33-tn-Dh3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation View Controller-->
+        <scene sceneID="d0y-bZ-v5s">
+            <objects>
+                <navigationController id="e33-tn-Dh3" customClass="NavigationViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sez-sA-FOl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nKs-2C-vX2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6G-y6-pD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="418"/>
+        </scene>
+        <!--IOS开发助手-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="IOS开发助手" id="BYZ-38-t0r" customClass="MainViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoD-jq-KiZ" userLabel="UI">
+                                <rect key="frame" x="90" y="260" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" image="ui_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pr6-o0-WLm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-iV-7ix" userLabel="Network">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="53W-sc-FlB"/>
+                                    <constraint firstAttribute="width" constant="80" id="OCe-BY-db7"/>
+                                </constraints>
+                                <state key="normal" image="navmenu_sort"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-gr-wMs" userLabel="Founction">
+                                <rect key="frame" x="430" y="260" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" image="function_sort"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP3-vu-ZUC" userLabel="Threads">
+                                <rect key="frame" x="90" y="430" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" image="api_sort"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7O-a6-3gc" userLabel="Device">
+                                <rect key="frame" x="260" y="430" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" image="device_sort"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izq-Uv-zgS" userLabel="More">
+                                <rect key="frame" x="430" y="430" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" image="other_sort"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1sE-69-G4M"/>
+                            <constraint firstItem="AP3-vu-ZUC" firstAttribute="width" secondItem="xoD-jq-KiZ" secondAttribute="width" id="3ft-Go-P8G"/>
+                            <constraint firstItem="izq-Uv-zgS" firstAttribute="height" secondItem="AP3-vu-ZUC" secondAttribute="height" id="4c5-2x-Yi3"/>
+                            <constraint firstItem="lf7-gr-wMs" firstAttribute="height" secondItem="D6p-iV-7ix" secondAttribute="height" id="5Zz-Qy-gP0"/>
+                            <constraint firstItem="lf7-gr-wMs" firstAttribute="width" secondItem="D6p-iV-7ix" secondAttribute="width" id="9m2-xv-GMh"/>
+                            <constraint firstItem="izq-Uv-zgS" firstAttribute="width" secondItem="AP3-vu-ZUC" secondAttribute="width" id="9uh-9W-Pu3"/>
+                            <constraint firstItem="izq-Uv-zgS" firstAttribute="centerX" secondItem="lf7-gr-wMs" secondAttribute="centerX" id="Cdd-IN-Lil"/>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="height" secondItem="xoD-jq-KiZ" secondAttribute="height" id="HMX-gN-ewt"/>
+                            <constraint firstItem="AP3-vu-ZUC" firstAttribute="leading" secondItem="xoD-jq-KiZ" secondAttribute="leading" id="JKy-8C-LN3"/>
+                            <constraint firstItem="lf7-gr-wMs" firstAttribute="centerX" secondItem="xoD-jq-KiZ" secondAttribute="centerX" multiplier="3" constant="80" id="LKu-DJ-cqZ"/>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODn-Tu-0lt"/>
+                            <constraint firstItem="i7O-a6-3gc" firstAttribute="centerX" secondItem="D6p-iV-7ix" secondAttribute="centerX" id="Q5M-ij-1bi"/>
+                            <constraint firstItem="izq-Uv-zgS" firstAttribute="centerY" secondItem="AP3-vu-ZUC" secondAttribute="centerY" id="T9b-rD-WmX"/>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="width" secondItem="xoD-jq-KiZ" secondAttribute="width" id="bR3-Pe-6Ss"/>
+                            <constraint firstItem="AP3-vu-ZUC" firstAttribute="bottom" secondItem="xoD-jq-KiZ" secondAttribute="bottom" multiplier="1.5" id="ct4-28-X3y"/>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="leading" secondItem="xoD-jq-KiZ" secondAttribute="centerX" multiplier="2" id="czj-tQ-zIZ"/>
+                            <constraint firstItem="AP3-vu-ZUC" firstAttribute="height" secondItem="xoD-jq-KiZ" secondAttribute="height" id="dBf-d0-wcr"/>
+                            <constraint firstItem="lf7-gr-wMs" firstAttribute="centerY" secondItem="D6p-iV-7ix" secondAttribute="centerY" id="eQk-cF-Zxp"/>
+                            <constraint firstItem="i7O-a6-3gc" firstAttribute="height" secondItem="AP3-vu-ZUC" secondAttribute="height" id="fwa-Vs-Aq0"/>
+                            <constraint firstItem="D6p-iV-7ix" firstAttribute="centerY" secondItem="xoD-jq-KiZ" secondAttribute="centerY" id="iID-cg-b8h"/>
+                            <constraint firstItem="i7O-a6-3gc" firstAttribute="centerY" secondItem="AP3-vu-ZUC" secondAttribute="centerY" id="jfi-xw-H4g"/>
+                            <constraint firstItem="i7O-a6-3gc" firstAttribute="width" secondItem="AP3-vu-ZUC" secondAttribute="width" id="zgu-Mv-HqZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="IOS开发助手" id="a0X-MF-aA1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="api_sort" width="110" height="110"/>
+        <image name="device_sort" width="110" height="110"/>
+        <image name="function_sort" width="110" height="110"/>
+        <image name="navmenu_sort" width="110" height="110"/>
+        <image name="other_sort" width="110" height="110"/>
+        <image name="ui_sort" width="110" height="110"/>
+    </resources>
+</document>
