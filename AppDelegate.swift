@@ -16,7 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 注意: 在iOS8中, 必须提前注册通知类型
+        if #available(iOS 8.0, *){
+            let type:UIUserNotificationType=[UIUserNotificationType.Alert,UIUserNotificationType.Badge,UIUserNotificationType.Sound]
+            let settings=UIUserNotificationSettings(forTypes: type, categories: nil)
+            // 注册通知类型
+            application.registerUserNotificationSettings(settings)
+        }
+        
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        NSLog(" %@", notification.userInfo!)
+        /*
+        let label=UILabel()
+        label.frame=CGRectMake(0, 250, 200, 200)
+        label.numberOfLines=0;
+        label.textColor=UIColor.wheatColor()
+        label.text=NSString(format: " %@", notification.userInfo!) as String
+        label.font=UIFont.systemFontOfSize(21)
+        label.backgroundColor=UIColor.grayColor()
+        self.window?.rootViewController!.view.addSubview(label)
+        */
+        application.applicationIconBadgeNumber=0
     }
 
     func applicationWillResignActive(application: UIApplication) {

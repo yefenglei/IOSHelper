@@ -16,8 +16,8 @@ class UICellItems {
                 self._dataList=[CellGroup]()
                 // 0组
                 let group=CellGroup()
-                let item1=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
-                let item2=ArrowCellItem(title: "通讯录2", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
+                let item1=ArrowCellItem(title: "本地通知", icon: "MorePush", targetViewControllerName: "LocalNotificationViewController")
+                let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
                 group.addCellItem(item1)
                 group.addCellItem(item2)
                 group.header="组1"

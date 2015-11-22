@@ -23,6 +23,53 @@
             </objects>
             <point key="canvasLocation" x="-390" y="418"/>
         </scene>
+        <!--本地通知-->
+        <scene sceneID="TNc-sN-25W">
+            <objects>
+                <viewController storyboardIdentifier="LocalNotificationViewController" title="本地通知" id="zwu-78-WAk" customClass="LocalNotificationViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fcn-YC-fHD"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLI-Xs-ofo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KG2-bq-HE2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nF-AX-F9i">
+                                <rect key="frame" x="250" y="330" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Fs-kS-8FN"/>
+                                    <constraint firstAttribute="width" constant="100" id="9qO-2L-Vne"/>
+                                </constraints>
+                                <state key="normal" title="取消通知"/>
+                                <connections>
+                                    <action selector="removeNote:" destination="zwu-78-WAk" eventType="touchUpInside" id="XyR-f6-Pvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bup-8B-o1n">
+                                <rect key="frame" x="270" y="187" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="注册通知"/>
+                                <connections>
+                                    <action selector="addNote:" destination="zwu-78-WAk" eventType="touchUpInside" id="GZ7-io-eWY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8nF-AX-F9i" firstAttribute="centerX" secondItem="Bup-8B-o1n" secondAttribute="centerX" id="2Se-QT-pyL"/>
+                            <constraint firstItem="Bup-8B-o1n" firstAttribute="top" secondItem="Fcn-YC-fHD" secondAttribute="bottom" constant="167" id="Efc-Lw-rQB"/>
+                            <constraint firstItem="Bup-8B-o1n" firstAttribute="centerX" secondItem="KG2-bq-HE2" secondAttribute="centerX" id="fnJ-hp-9Mh"/>
+                            <constraint firstItem="8nF-AX-F9i" firstAttribute="top" secondItem="Bup-8B-o1n" secondAttribute="bottom" constant="113" id="xNI-cL-VVR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XY4-qn-YEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="1103"/>
+        </scene>
         <!--IOS开发助手-->
         <scene sceneID="tne-QT-ifu">
             <objects>
