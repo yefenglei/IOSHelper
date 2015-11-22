@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -69,6 +70,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY4-qn-YEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-396" y="1103"/>
+        </scene>
+        <!--AddressBookUI基本使用-->
+        <scene sceneID="sDd-qO-qkb">
+            <objects>
+                <viewController storyboardIdentifier="AddressBookUIViewController" title="AddressBookUI基本使用" id="4Gl-5z-HKL" customClass="AddressBookUIViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAZ-Wh-mc2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bzg-aF-oAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KMQ-id-cF2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-la-Cm6">
+                                <rect key="frame" x="260" y="82" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K1u-tg-i4c"/>
+                                    <constraint firstAttribute="width" constant="80" id="W6I-3r-mSJ"/>
+                                </constraints>
+                                <state key="normal" title="进入通讯录"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="4Gl-5z-HKL" eventType="touchUpInside" id="viS-xC-1kl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0wy-la-Cm6" firstAttribute="top" secondItem="IAZ-Wh-mc2" secondAttribute="bottom" constant="62" id="Q8S-m6-UCY"/>
+                            <constraint firstItem="0wy-la-Cm6" firstAttribute="centerX" secondItem="KMQ-id-cF2" secondAttribute="centerX" id="tnL-I5-f2I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXG-p0-Kwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="1809"/>
         </scene>
         <!--IOS开发助手-->
         <scene sceneID="tne-QT-ifu">
@@ -152,6 +190,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+        <!--通讯录的基本访问-->
+        <scene sceneID="koY-Ij-tT6">
+            <objects>
+                <viewController storyboardIdentifier="AddressBookViewController" title="通讯录的基本访问" id="i2q-lb-XI0" customClass="AddressBookViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DOf-L5-P4g"/>
+                        <viewControllerLayoutGuide type="bottom" id="jEx-St-E9P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vgb-cq-g0P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYj-Hh-doj">
+                                <rect key="frame" x="168" y="100" width="75" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fWp-eH-ehf"/>
+                                    <constraint firstAttribute="width" constant="75" id="mSB-xl-vPo"/>
+                                </constraints>
+                                <state key="normal" title="获取通讯录"/>
+                                <connections>
+                                    <action selector="getAddressBookClicked:" destination="i2q-lb-XI0" eventType="touchUpInside" id="LwN-jD-g0c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5N-iS-R3N">
+                                <rect key="frame" x="263" y="100" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="更新联系人"/>
+                                <connections>
+                                    <action selector="updateRecord:" destination="i2q-lb-XI0" eventType="touchUpInside" id="k6A-tz-JLE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1V-Py-L3f" userLabel="添加联系人">
+                                <rect key="frame" x="358" y="100" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="添加联系人"/>
+                                <connections>
+                                    <action selector="addNewRecord:" destination="i2q-lb-XI0" eventType="touchUpInside" id="pgf-2X-EQV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6ca-aV-TrC">
+                                <rect key="frame" x="20" y="150" width="560" height="450"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A1V-Py-L3f" firstAttribute="top" secondItem="hYj-Hh-doj" secondAttribute="top" id="0Br-3B-ZXg"/>
+                            <constraint firstItem="A1V-Py-L3f" firstAttribute="width" secondItem="hYj-Hh-doj" secondAttribute="width" id="0pB-dQ-lii"/>
+                            <constraint firstItem="A1V-Py-L3f" firstAttribute="height" secondItem="hYj-Hh-doj" secondAttribute="height" id="1T9-Ja-XKm"/>
+                            <constraint firstItem="G5N-iS-R3N" firstAttribute="width" secondItem="hYj-Hh-doj" secondAttribute="width" id="C5e-ff-GOW"/>
+                            <constraint firstItem="hYj-Hh-doj" firstAttribute="top" secondItem="DOf-L5-P4g" secondAttribute="bottom" constant="80" id="Ggz-Vi-9p5"/>
+                            <constraint firstItem="G5N-iS-R3N" firstAttribute="height" secondItem="hYj-Hh-doj" secondAttribute="height" id="K9q-4x-WCl"/>
+                            <constraint firstItem="A1V-Py-L3f" firstAttribute="leading" secondItem="G5N-iS-R3N" secondAttribute="trailing" constant="20" id="Llu-wg-Vwz"/>
+                            <constraint firstItem="6ca-aV-TrC" firstAttribute="centerX" secondItem="vgb-cq-g0P" secondAttribute="centerX" id="Yhf-ej-jKd"/>
+                            <constraint firstItem="6ca-aV-TrC" firstAttribute="leading" secondItem="vgb-cq-g0P" secondAttribute="leadingMargin" id="aCB-fj-ouR"/>
+                            <constraint firstItem="jEx-St-E9P" firstAttribute="top" secondItem="6ca-aV-TrC" secondAttribute="bottom" id="adS-uv-BBl"/>
+                            <constraint firstItem="G5N-iS-R3N" firstAttribute="top" secondItem="hYj-Hh-doj" secondAttribute="top" id="fVT-jQ-GGL"/>
+                            <constraint firstItem="6ca-aV-TrC" firstAttribute="top" secondItem="hYj-Hh-doj" secondAttribute="bottom" constant="20" id="lji-sR-Iw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6ca-aV-TrC" secondAttribute="trailing" id="m5F-mu-I4x"/>
+                            <constraint firstItem="G5N-iS-R3N" firstAttribute="leading" secondItem="hYj-Hh-doj" secondAttribute="trailing" constant="20" id="o6R-t6-oqK"/>
+                            <constraint firstItem="G5N-iS-R3N" firstAttribute="centerX" secondItem="vgb-cq-g0P" secondAttribute="centerX" id="vIL-vx-97y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textview" destination="6ca-aV-TrC" id="xDR-NY-esG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uW-OL-hU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="1161"/>
         </scene>
     </scenes>
     <resources>

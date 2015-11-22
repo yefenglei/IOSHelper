@@ -18,8 +18,10 @@ class UICellItems {
                 let group=CellGroup()
                 let item1=ArrowCellItem(title: "本地通知", icon: "MorePush", targetViewControllerName: "LocalNotificationViewController")
                 let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
+                let itemAddressBookUI=ArrowCellItem(title: "AddressBookUI基本使用", icon: "MorePush", targetViewControllerName: "AddressBookUIViewController")
                 group.addCellItem(item1)
                 group.addCellItem(item2)
+                group.addCellItem(itemAddressBookUI)
                 group.header="组1"
         
                 self._dataList!.append(group)
