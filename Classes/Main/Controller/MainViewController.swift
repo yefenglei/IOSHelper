@@ -13,7 +13,11 @@ class MainViewController: UIViewController {
     @IBAction func UIButtonClicked(sender: UIButton) {
         // 跳转到UI tableview
         let vc=UserInterfaceViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        if #available(iOS 8.0, *) {
+            self.navigationController?.showViewController(vc, sender: self)
+        } else {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     override func viewDidLoad() {

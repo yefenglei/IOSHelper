@@ -267,6 +267,58 @@
             </objects>
             <point key="canvasLocation" x="310" y="1161"/>
         </scene>
+        <!--Address Book View Controller-->
+        <scene sceneID="ebN-yV-hRe">
+            <objects>
+                <viewController storyboardIdentifier="RHAddressBookViewController" id="0cp-4k-e9Z" customClass="RHAddressBookViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lxd-Pl-iqX"/>
+                        <viewControllerLayoutGuide type="bottom" id="LMT-kV-KTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="otx-ZQ-xLv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2F-bk-W6X">
+                                <rect key="frame" x="250" y="70" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HhJ-vN-a7q"/>
+                                    <constraint firstAttribute="height" constant="30" id="PYv-Mg-Hnm"/>
+                                </constraints>
+                                <state key="normal" title="获取联系人"/>
+                                <connections>
+                                    <action selector="getPeoples:" destination="0cp-4k-e9Z" eventType="touchUpInside" id="dSW-sO-t2B"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-Ga-ij2">
+                                <rect key="frame" x="20" y="120" width="560" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LMT-kV-KTS" firstAttribute="top" secondItem="Re3-Ga-ij2" secondAttribute="bottom" id="ANo-26-oMw"/>
+                            <constraint firstItem="Re3-Ga-ij2" firstAttribute="leading" secondItem="otx-ZQ-xLv" secondAttribute="leadingMargin" id="NiC-ue-7bn"/>
+                            <constraint firstItem="Re3-Ga-ij2" firstAttribute="centerX" secondItem="otx-ZQ-xLv" secondAttribute="centerX" id="O2J-ZM-RU0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Re3-Ga-ij2" secondAttribute="trailing" id="Wyk-rx-bDK"/>
+                            <constraint firstItem="E2F-bk-W6X" firstAttribute="top" secondItem="Lxd-Pl-iqX" secondAttribute="bottom" constant="50" id="eeu-8x-0I6"/>
+                            <constraint firstItem="E2F-bk-W6X" firstAttribute="centerX" secondItem="otx-ZQ-xLv" secondAttribute="centerX" id="kXy-qc-fkB"/>
+                            <constraint firstItem="Re3-Ga-ij2" firstAttribute="top" secondItem="Lxd-Pl-iqX" secondAttribute="bottom" constant="100" id="ysh-g3-YDU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Re3-Ga-ij2" id="BE1-sl-A81"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6v-uF-FjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1842"/>
+        </scene>
     </scenes>
     <resources>
         <image name="api_sort" width="110" height="110"/>

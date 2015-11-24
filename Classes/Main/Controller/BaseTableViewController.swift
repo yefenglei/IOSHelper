@@ -74,17 +74,20 @@ class BaseTableViewController: UITableViewController {
         let arrowCell=cell as? ArrowCellItem
         if(arrowCell != nil && arrowCell!.targetViewControllerName != nil){
             // 如果是箭头模型
-            //let vcTpye=swiftClassFromString(arrowCell!.targetViewControllerName) as! UIViewController.Type
-            //let vc=vcTpye.init()
-            //vc.title=arrowCell?.title
-            
-            // 从storyboard中加载view
-            let mainSB=UIStoryboard(name: "Main", bundle: nil)
-            let vcInSB=mainSB.instantiateViewControllerWithIdentifier(arrowCell!.targetViewControllerName)
+            let vc:UIViewController!
+            if(arrowCell!.useStoryboard==true){
+                // 从storyboard中加载view
+                let mainSB=UIStoryboard(name: "Main", bundle: nil)
+                vc=mainSB.instantiateViewControllerWithIdentifier(arrowCell!.targetViewControllerName)
+            }else{
+                let vcTpye=swiftClassFromString(arrowCell!.targetViewControllerName) as! UIViewController.Type
+                vc=vcTpye.init()
+                vc.title=arrowCell?.title
+            }
             if #available(iOS 8.0, *) {
-                self.navigationController?.showViewController(vcInSB, sender: self)
+                self.navigationController?.showViewController(vc, sender: self)
             } else {
-                self.navigationController?.pushViewController(vcInSB, animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

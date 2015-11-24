@@ -16,7 +16,7 @@ class CellItem:NSObject{
     var option:ItemOption?
     var subTitle:String?
     init(title:String!,icon:String?){
-        self.title=title;
+        self.title=title
         self.icon=icon
     }
 }
