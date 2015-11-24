@@ -20,11 +20,16 @@ class UICellItems {
                 let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
                 let itemAddressBookUI=ArrowCellItem(title: "AddressBookUI基本使用", icon: "MorePush", targetViewControllerName: "AddressBookUIViewController")
                 let itemRHAddressBook=ArrowCellItem(title: "集成RHAddressBookViewController", icon: "MorePush", targetViewControllerName: "RHAddressBookViewController")
+                let itemQRCode=ArrowCellItem(title: "生成二维码", icon: "MorePush", targetViewControllerName: "QRCodeViewController",useStoryboard: false)
+                let itemSacnQRCode=ArrowCellItem(title: "扫二维码", icon: "MorePush", targetViewControllerName: "ScanQRCodeViewController",useStoryboard: false)
+        
         
                 group.addCellItem(item1)
                 group.addCellItem(item2)
                 group.addCellItem(itemAddressBookUI)
                 group.addCellItem(itemRHAddressBook)
+                group.addCellItem(itemQRCode)
+                group.addCellItem(itemSacnQRCode)
                 group.header="组1"
         
                 self._dataList!.append(group)
