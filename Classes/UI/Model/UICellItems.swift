@@ -16,14 +16,12 @@ class UICellItems {
                 self._dataList=[CellGroup]()
                 // 0组
                 let group=CellGroup()
-                let item1=ArrowCellItem(title: "本地通知", icon: "MorePush", targetViewControllerName: "LocalNotificationViewController")
-                let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController")
-                let itemAddressBookUI=ArrowCellItem(title: "AddressBookUI基本使用", icon: "MorePush", targetViewControllerName: "AddressBookUIViewController")
+                let item1=ArrowCellItem(title: "本地通知", icon: "MorePush", targetViewControllerName: "LocalNotificationViewController",useStoryboard: true)
+                let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController",useStoryboard: true)
+                let itemAddressBookUI=ArrowCellItem(title: "AddressBookUI基本使用", icon: "MorePush", targetViewControllerName: "AddressBookUIViewController",useStoryboard: true)
                 let itemRHAddressBook=ArrowCellItem(title: "集成RHAddressBookViewController", icon: "MorePush", targetViewControllerName: "RHAddressBookViewController")
-                let itemQRCode=ArrowCellItem(title: "生成二维码", icon: "MorePush", targetViewControllerName: "QRCodeViewController",useStoryboard: false)
-                let itemSacnQRCode=ArrowCellItem(title: "扫二维码", icon: "MorePush", targetViewControllerName: "ScanQRCodeViewController",useStoryboard: false)
-        
-        
+                let itemQRCode=ArrowCellItem(title: "生成二维码", icon: "MorePush", targetViewControllerName: "QRCodeViewController")
+                let itemSacnQRCode=ArrowCellItem(title: "扫二维码", icon: "MorePush", targetViewControllerName: "ScanQRCodeViewController")
                 group.addCellItem(item1)
                 group.addCellItem(item2)
                 group.addCellItem(itemAddressBookUI)
@@ -32,7 +30,16 @@ class UICellItems {
                 group.addCellItem(itemSacnQRCode)
                 group.header="组1"
         
+                // 组2
+                let group2=CellGroup()
+                let itemQuartz2D=ArrowCellItem(title: "Quartz2D简单使用", icon: "MorePush", targetViewControllerName: "Quartz2DViewController",useStoryboard: true)
+                let itemPaintBoard=ArrowCellItem(title: "简单画图板", icon: "MorePush", targetViewControllerName: "PaintViewController",useStoryboard: true)
+                group2.addCellItem(itemQuartz2D)
+                group2.addCellItem(itemPaintBoard)
+        
+        
                 self._dataList!.append(group)
+                self._dataList!.append(group2)
             }
             return self._dataList!
         }

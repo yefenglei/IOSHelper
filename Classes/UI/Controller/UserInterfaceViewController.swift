@@ -13,6 +13,7 @@ class UserInterfaceViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title="UI界面"
         // 设置tableview的数据源
         setDataList(UICellItems.dataList)
 

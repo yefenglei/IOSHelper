@@ -10,7 +10,8 @@ import Foundation
 class ArrowCellItem: CellItem {
     var targetViewControllerName:String!
     var useStoryboard:Bool!
-    init(title: String, icon: String?,targetViewControllerName:String,useStoryboard:Bool=true){
+    
+    init(title: String, icon: String?,targetViewControllerName:String,useStoryboard:Bool=false){
         super.init(title: title, icon: icon)
         self.targetViewControllerName=targetViewControllerName
         self.useStoryboard=useStoryboard
