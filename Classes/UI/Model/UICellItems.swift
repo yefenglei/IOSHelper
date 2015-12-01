@@ -28,15 +28,17 @@ class UICellItems {
                 group.addCellItem(itemRHAddressBook)
                 group.addCellItem(itemQRCode)
                 group.addCellItem(itemSacnQRCode)
-                group.header="组1"
+                group.header="界面"
         
                 // 组2
                 let group2=CellGroup()
                 let itemQuartz2D=ArrowCellItem(title: "Quartz2D简单使用", icon: "MorePush", targetViewControllerName: "Quartz2DViewController",useStoryboard: true)
                 let itemPaintBoard=ArrowCellItem(title: "简单画图板", icon: "MorePush", targetViewControllerName: "PaintViewController",useStoryboard: true)
+                let itemClock=ArrowCellItem(title: "时钟", icon: "MorePush", targetViewControllerName: "ClockViewController",useStoryboard: true)
                 group2.addCellItem(itemQuartz2D)
                 group2.addCellItem(itemPaintBoard)
-        
+                group2.addCellItem(itemClock)
+                group2.header="动画"
         
                 self._dataList!.append(group)
                 self._dataList!.append(group2)

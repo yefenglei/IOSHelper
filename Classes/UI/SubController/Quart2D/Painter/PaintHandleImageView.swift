@@ -35,8 +35,8 @@ class PaintHandleImageView: UIView,UIGestureRecognizerDelegate {
         addImageView()
         // 添加手势
         addLongpressGestureRecognizer()
-        addRotationGestureRecognizer()
         addPinchGestureRecognizer()
+        addRotationGestureRecognizer()
     }
 
     required init?(coder aDecoder: NSCoder) {

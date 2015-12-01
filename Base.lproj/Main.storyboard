@@ -353,6 +353,42 @@
             </objects>
             <point key="canvasLocation" x="305" y="2528"/>
         </scene>
+        <!--时钟-->
+        <scene sceneID="Pac-nt-lTs">
+            <objects>
+                <viewController storyboardIdentifier="ClockViewController" title="时钟" id="OJe-R1-GvX" customClass="ClockViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhJ-pG-dze"/>
+                        <viewControllerLayoutGuide type="bottom" id="VIY-vj-1tC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VoA-js-dhm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_body" translatesAutoresizingMaskIntoConstraints="NO" id="MkD-Z9-byp">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8I7-WA-1Lx"/>
+                                    <constraint firstAttribute="width" constant="200" id="hbs-Sv-Z3U"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MkD-Z9-byp" firstAttribute="centerX" secondItem="VoA-js-dhm" secondAttribute="centerX" id="gE3-ZX-DoW"/>
+                            <constraint firstItem="MkD-Z9-byp" firstAttribute="centerY" secondItem="VoA-js-dhm" secondAttribute="centerY" id="tbw-m2-EDR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clockView" destination="MkD-Z9-byp" id="WPp-nb-A8d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1Z-vI-WQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="2346"/>
+        </scene>
         <!--IOS开发助手-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -567,6 +603,7 @@
     </scenes>
     <resources>
         <image name="api_sort" width="110" height="110"/>
+        <image name="clock_body" width="200" height="200"/>
         <image name="device_sort" width="110" height="110"/>
         <image name="function_sort" width="110" height="110"/>
         <image name="navmenu_sort" width="110" height="110"/>
