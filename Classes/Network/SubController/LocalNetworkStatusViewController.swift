@@ -17,6 +17,8 @@ class LocalNetworkStatusViewController: UIViewController {
         self.view.backgroundColor=UIColor.whiteColor()
         
         self.addButtons()
+        
+        listenNetwork()
     }
 
     override func didReceiveMemoryWarning() {

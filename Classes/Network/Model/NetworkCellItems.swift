@@ -19,10 +19,13 @@ class NetworkCellItems {
         let itemNativeNetwork=ArrowCellItem(title: "IOS自带的网络请求", icon: "MorePush", targetViewControllerName: "NativeNetworkViewController",useStoryboard: true)
         let itemLocalNetwork=ArrowCellItem(title: "本地网络状态", icon: "MorePush", targetViewControllerName: "LocalNetworkStatusViewController")
         let itemSessionNetwork=ArrowCellItem(title: "NSURLSession", icon: "MorePush", targetViewControllerName: "SessionNetworkViewController")
+        let itemAFN=ArrowCellItem(title: "AFN简单使用", icon: "MorePush", targetViewControllerName: "AFNViewController")
+        
         
         group.addCellItem(itemNativeNetwork)
         group.addCellItem(itemLocalNetwork)
         group.addCellItem(itemSessionNetwork)
+        group.addCellItem(itemAFN)
         
         group.header="网络"
         

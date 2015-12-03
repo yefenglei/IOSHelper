@@ -17,7 +17,7 @@ class NetworkTool {
         // 2.获得Reachability对象的当前网络状态
         
         let wifiStatus=wifi.currentReachabilityStatus()
-        if(wifiStatus.rawValue != NotReachable.rawValue){
+        if(wifiStatus.rawValue == ReachableViaWWAN.rawValue){
             return true
         }else{
             return false
@@ -31,7 +31,7 @@ class NetworkTool {
         // 2.获得Reachability对象的当前网络状态
         let wifiStatus=wifi.currentReachabilityStatus()
         
-        return (wifiStatus.rawValue != NotReachable.rawValue)
+        return (wifiStatus.rawValue == ReachableViaWiFi.rawValue)
     }
     
     
