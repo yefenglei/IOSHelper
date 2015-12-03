@@ -224,7 +224,7 @@
                         <viewControllerLayoutGuide type="top" id="XJ4-hv-fox"/>
                         <viewControllerLayoutGuide type="bottom" id="id7-yC-d0L"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fbd-Vt-pfF">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fbd-Vt-pfF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -353,6 +353,120 @@
             </objects>
             <point key="canvasLocation" x="305" y="2528"/>
         </scene>
+        <!--手势解锁-->
+        <scene sceneID="bHg-nN-xtz">
+            <objects>
+                <viewController storyboardIdentifier="GestureUnlockViewController" title="手势解锁" id="9EN-GW-DfT" customClass="GestureUnlockViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MhH-Ow-lpA"/>
+                        <viewControllerLayoutGuide type="bottom" id="KjM-2A-0Qs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gS0-Z2-tLe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="eny-u1-lmO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfF-pW-8Sh" customClass="UnLockView" customModule="IOSHelper" customModuleProvider="target">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="eWM-sD-9vH"/>
+                                    <constraint firstAttribute="height" constant="320" id="nLM-9l-wKa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eny-u1-lmO" secondAttribute="trailing" id="8Pl-Uh-vaF"/>
+                            <constraint firstItem="eny-u1-lmO" firstAttribute="top" secondItem="MhH-Ow-lpA" secondAttribute="bottom" id="KtV-fo-MDg"/>
+                            <constraint firstItem="KjM-2A-0Qs" firstAttribute="top" secondItem="eny-u1-lmO" secondAttribute="bottom" id="L4w-q0-epy"/>
+                            <constraint firstItem="kfF-pW-8Sh" firstAttribute="centerY" secondItem="gS0-Z2-tLe" secondAttribute="centerY" id="Nth-7S-goA"/>
+                            <constraint firstItem="eny-u1-lmO" firstAttribute="leading" secondItem="gS0-Z2-tLe" secondAttribute="leading" id="ULw-YA-aeC"/>
+                            <constraint firstItem="kfF-pW-8Sh" firstAttribute="centerX" secondItem="gS0-Z2-tLe" secondAttribute="centerX" id="t7W-nu-CLI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOv-dX-ZaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="3221"/>
+        </scene>
+        <!--网络-->
+        <scene sceneID="Tm4-Ra-tWX">
+            <objects>
+                <viewController storyboardIdentifier="NativeNetworkViewController" title="网络" id="DdF-8e-lYT" customClass="NativeNetworkViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZHR-76-MP2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aoz-Wu-8b7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dsm-qn-6Ea">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KhW-ZK-dvF">
+                                <rect key="frame" x="40" y="40" width="520" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFP-Xb-hvf">
+                                <rect key="frame" x="263" y="82" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="下载大数据"/>
+                                <connections>
+                                    <action selector="btnDownloadBigData:" destination="DdF-8e-lYT" eventType="touchUpInside" id="uK3-FK-NKC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHr-DU-X0P">
+                                <rect key="frame" x="230" y="132" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="GLl-Rl-bTn"/>
+                                    <constraint firstAttribute="height" constant="30" id="dTV-H2-R4N"/>
+                                </constraints>
+                                <state key="normal" title="发起post请求"/>
+                                <connections>
+                                    <action selector="postRequestClicked:" destination="DdF-8e-lYT" eventType="touchUpInside" id="Ba8-79-Nou"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-aY-qZs">
+                                <rect key="frame" x="250" y="182" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0mz-gl-6p9"/>
+                                    <constraint firstAttribute="height" constant="30" id="RDd-Tw-r0r"/>
+                                </constraints>
+                                <state key="normal" title="断点下载"/>
+                                <connections>
+                                    <action selector="continuedDownloadClicked:" destination="DdF-8e-lYT" eventType="touchUpInside" id="ff9-E3-RZx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GCm-aY-qZs" firstAttribute="centerX" secondItem="dsm-qn-6Ea" secondAttribute="centerX" id="0yj-3Q-DG8"/>
+                            <constraint firstItem="KhW-ZK-dvF" firstAttribute="centerX" secondItem="dsm-qn-6Ea" secondAttribute="centerX" id="3dJ-H9-Zra"/>
+                            <constraint firstItem="KhW-ZK-dvF" firstAttribute="top" secondItem="ZHR-76-MP2" secondAttribute="bottom" constant="20" id="3wO-0p-9Dg"/>
+                            <constraint firstItem="GCm-aY-qZs" firstAttribute="top" secondItem="tHr-DU-X0P" secondAttribute="bottom" constant="20" id="GTA-Rl-Y4m"/>
+                            <constraint firstItem="tHr-DU-X0P" firstAttribute="centerX" secondItem="dsm-qn-6Ea" secondAttribute="centerX" id="Lju-yr-jBo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KhW-ZK-dvF" secondAttribute="trailing" constant="20" id="MeN-sX-gbH"/>
+                            <constraint firstItem="tHr-DU-X0P" firstAttribute="top" secondItem="TFP-Xb-hvf" secondAttribute="bottom" constant="20" id="RmB-rU-XtO"/>
+                            <constraint firstItem="KhW-ZK-dvF" firstAttribute="leading" secondItem="dsm-qn-6Ea" secondAttribute="leadingMargin" constant="20" id="cV9-tL-t7P"/>
+                            <constraint firstItem="TFP-Xb-hvf" firstAttribute="top" secondItem="KhW-ZK-dvF" secondAttribute="bottom" constant="40" id="kJU-Vv-rsH"/>
+                            <constraint firstItem="TFP-Xb-hvf" firstAttribute="centerX" secondItem="dsm-qn-6Ea" secondAttribute="centerX" id="kO8-35-1Wj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progress" destination="KhW-ZK-dvF" id="KJs-zF-EJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaW-Dd-scV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="3897"/>
+        </scene>
         <!--时钟-->
         <scene sceneID="Pac-nt-lTs">
             <objects>
@@ -387,7 +501,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1Z-vI-WQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="2346"/>
+            <point key="canvasLocation" x="-370" y="3221"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JtU-tM-rIa">
+            <objects>
+                <viewController storyboardIdentifier="GCDViewController" id="Kr3-eB-Pwm" customClass="GCDViewController" customModule="IOSHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FN7-Jk-9xO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hzG-Yc-V8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jlu-2V-vBY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPP-Rp-yke">
+                                <rect key="frame" x="195" y="40" width="45" height="30"/>
+                                <animations/>
+                                <state key="normal" title="多线程"/>
+                                <connections>
+                                    <action selector="btnThreadsClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="Zxz-1f-3Wn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzC-K1-PTp">
+                                <rect key="frame" x="260" y="40" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="IeF-Xm-mxm"/>
+                                    <constraint firstAttribute="height" constant="30" id="lee-WR-2GB"/>
+                                </constraints>
+                                <state key="normal" title="合并图片"/>
+                                <connections>
+                                    <action selector="btnCombineImageClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="GIn-6E-acO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOs-xP-TWR">
+                                <rect key="frame" x="360" y="40" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="线程间依赖"/>
+                                <connections>
+                                    <action selector="btnThreadsDependencyClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="c80-uy-wyw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wi-Ll-jiL">
+                                <rect key="frame" x="174" y="90" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="下载图片"/>
+                                <connections>
+                                    <action selector="btnDownloadImageClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="OPb-oM-Cxo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLq-E9-W7Z">
+                                <rect key="frame" x="254" y="90" width="93" height="30"/>
+                                <animations/>
+                                <state key="normal" title="SDWebImage"/>
+                                <connections>
+                                    <action selector="btnSDWebImageClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="pqY-gA-QPR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-XA-nxz">
+                                <rect key="frame" x="367" y="90" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="一次性代码"/>
+                                <connections>
+                                    <action selector="btnOnceCodeClicked:" destination="Kr3-eB-Pwm" eventType="touchUpInside" id="dok-IQ-Ciw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXW-XL-BRp">
+                                <rect key="frame" x="180" y="140" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="0vC-eN-Ep0"/>
+                                    <constraint firstAttribute="width" constant="240" id="NMj-Lo-cQZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zx6-XA-nxz" firstAttribute="leading" secondItem="nLq-E9-W7Z" secondAttribute="trailing" constant="20" id="B0R-pf-4wr"/>
+                            <constraint firstItem="OOs-xP-TWR" firstAttribute="top" secondItem="RzC-K1-PTp" secondAttribute="top" id="Fof-aX-W6j"/>
+                            <constraint firstItem="wXW-XL-BRp" firstAttribute="top" secondItem="nLq-E9-W7Z" secondAttribute="bottom" constant="20" id="Kaw-pS-Bc5"/>
+                            <constraint firstItem="RzC-K1-PTp" firstAttribute="top" secondItem="pPP-Rp-yke" secondAttribute="top" id="M2V-Ml-PQt"/>
+                            <constraint firstItem="nLq-E9-W7Z" firstAttribute="centerX" secondItem="RzC-K1-PTp" secondAttribute="centerX" id="SyP-BP-Fhl"/>
+                            <constraint firstItem="Zx6-XA-nxz" firstAttribute="top" secondItem="nLq-E9-W7Z" secondAttribute="top" id="T1O-4l-oui"/>
+                            <constraint firstItem="RzC-K1-PTp" firstAttribute="leading" secondItem="pPP-Rp-yke" secondAttribute="trailing" constant="20" id="b5c-j7-asi"/>
+                            <constraint firstItem="OOs-xP-TWR" firstAttribute="leading" secondItem="RzC-K1-PTp" secondAttribute="trailing" constant="20" id="bbv-70-4wB"/>
+                            <constraint firstItem="RzC-K1-PTp" firstAttribute="centerX" secondItem="jlu-2V-vBY" secondAttribute="centerX" id="cE4-pf-clb"/>
+                            <constraint firstItem="RzC-K1-PTp" firstAttribute="top" secondItem="FN7-Jk-9xO" secondAttribute="bottom" constant="20" id="daM-hG-YbB"/>
+                            <constraint firstItem="nLq-E9-W7Z" firstAttribute="leading" secondItem="4wi-Ll-jiL" secondAttribute="trailing" constant="20" id="rtp-mD-5Nz"/>
+                            <constraint firstItem="wXW-XL-BRp" firstAttribute="centerX" secondItem="jlu-2V-vBY" secondAttribute="centerX" id="sUP-ms-E9Y"/>
+                            <constraint firstItem="nLq-E9-W7Z" firstAttribute="top" secondItem="4wi-Ll-jiL" secondAttribute="top" id="tgf-ig-9Y0"/>
+                            <constraint firstItem="nLq-E9-W7Z" firstAttribute="top" secondItem="RzC-K1-PTp" secondAttribute="bottom" constant="20" id="yaT-ob-A0I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wXW-XL-BRp" id="UY7-XG-zhO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBJ-j5-Vl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="3897"/>
         </scene>
         <!--IOS开发助手-->
         <scene sceneID="tne-QT-ifu">
@@ -404,7 +618,7 @@
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoD-jq-KiZ" userLabel="UI">
                                 <rect key="frame" x="90" y="260" width="80" height="80"/>
                                 <animations/>
-                                <state key="normal" image="ui_sort"/>
+                                <state key="normal" title="UI" image="ui_sort"/>
                                 <connections>
                                     <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pr6-o0-WLm"/>
                                 </connections>
@@ -416,27 +630,42 @@
                                     <constraint firstAttribute="height" constant="80" id="53W-sc-FlB"/>
                                     <constraint firstAttribute="width" constant="80" id="OCe-BY-db7"/>
                                 </constraints>
-                                <state key="normal" image="navmenu_sort"/>
+                                <state key="normal" title="Network" image="navmenu_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r6z-5R-A6X"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-gr-wMs" userLabel="Founction">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-gr-wMs">
                                 <rect key="frame" x="430" y="260" width="80" height="80"/>
                                 <animations/>
-                                <state key="normal" image="function_sort"/>
+                                <state key="normal" title="Function" image="function_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ixd-7F-aq8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP3-vu-ZUC" userLabel="Threads">
                                 <rect key="frame" x="90" y="430" width="80" height="80"/>
                                 <animations/>
-                                <state key="normal" image="api_sort"/>
+                                <state key="normal" title="Threads" image="api_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plI-Xp-4b6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7O-a6-3gc" userLabel="Device">
                                 <rect key="frame" x="260" y="430" width="80" height="80"/>
                                 <animations/>
-                                <state key="normal" image="device_sort"/>
+                                <state key="normal" title="Device" image="device_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xU-xw-ome"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izq-Uv-zgS" userLabel="More">
                                 <rect key="frame" x="430" y="430" width="80" height="80"/>
                                 <animations/>
-                                <state key="normal" image="other_sort"/>
+                                <state key="normal" title="More" image="other_sort"/>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSy-07-UcJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -602,6 +831,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Stars" width="320" height="568"/>
         <image name="api_sort" width="110" height="110"/>
         <image name="clock_body" width="200" height="200"/>
         <image name="device_sort" width="110" height="110"/>

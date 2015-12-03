@@ -12,11 +12,29 @@ class MainViewController: UIViewController {
     
     @IBAction func UIButtonClicked(sender: UIButton) {
         // 跳转到UI tableview
-        let vc=UserInterfaceViewController()
+        var vc:BaseTableViewController?
+        switch(sender.titleLabel!.text!.lowercaseString){
+            case "ui":
+                vc=UserInterfaceViewController()
+                break
+            case "network":
+                vc=NetworkViewController()
+                break
+            case "function":break
+            case "threads":
+                vc=ThreadsViewController()
+                break
+            case "device":break
+            case "more":break
+            default:break
+        }
+        if(vc==nil){
+            return
+        }
         if #available(iOS 8.0, *) {
-            self.navigationController?.showViewController(vc, sender: self)
+            self.navigationController?.showViewController(vc!, sender: self)
         } else {
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
 
