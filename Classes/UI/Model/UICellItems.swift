@@ -36,11 +36,13 @@ class UICellItems {
                 let itemPaintBoard=ArrowCellItem(title: "简单画图板", icon: "MorePush", targetViewControllerName: "PaintViewController",useStoryboard: true)
                 let itemClock=ArrowCellItem(title: "时钟", icon: "MorePush", targetViewControllerName: "ClockViewController",useStoryboard: true)
                 let itemGestureUnlock=ArrowCellItem(title: "手势解锁", icon: "MorePush", targetViewControllerName: "GestureUnlockViewController",useStoryboard: true)
+                let itemCoreAnimation=ArrowCellItem(title: "核心动画", icon: "MorePush", targetViewControllerName: "CoreAnimationViewController")
         
                 group2.addCellItem(itemQuartz2D)
                 group2.addCellItem(itemPaintBoard)
                 group2.addCellItem(itemClock)
                 group2.addCellItem(itemGestureUnlock)
+                group2.addCellItem(itemCoreAnimation)
                 group2.header="动画"
         
                 self._dataList!.append(group)
