@@ -22,12 +22,17 @@ class UICellItems {
                 let itemRHAddressBook=ArrowCellItem(title: "集成RHAddressBookViewController", icon: "MorePush", targetViewControllerName: "RHAddressBookViewController")
                 let itemQRCode=ArrowCellItem(title: "生成二维码", icon: "MorePush", targetViewControllerName: "QRCodeViewController")
                 let itemSacnQRCode=ArrowCellItem(title: "扫二维码", icon: "MorePush", targetViewControllerName: "ScanQRCodeViewController")
+                let itemPopover=ArrowCellItem(title: "Popover", icon: "MorePush", targetViewControllerName: "PopoverPresentationViewController")
+                let itemAlertView=ArrowCellItem(title: "对话框", icon: "MorePush", targetViewControllerName: "AlertViewController")
+        
                 group.addCellItem(item1)
                 group.addCellItem(item2)
                 group.addCellItem(itemAddressBookUI)
                 group.addCellItem(itemRHAddressBook)
                 group.addCellItem(itemQRCode)
                 group.addCellItem(itemSacnQRCode)
+                group.addCellItem(itemPopover)
+                group.addCellItem(itemAlertView)
                 group.header="界面"
         
                 // 组2
@@ -38,6 +43,8 @@ class UICellItems {
                 let itemGestureUnlock=ArrowCellItem(title: "手势解锁", icon: "MorePush", targetViewControllerName: "GestureUnlockViewController",useStoryboard: true)
                 let itemCoreAnimation=ArrowCellItem(title: "核心动画", icon: "MorePush", targetViewControllerName: "CoreAnimationViewController")
                 let itemTransition=ArrowCellItem(title: "自定义过场动画", icon: "MorePush", targetViewControllerName: "PopViewController",useStoryboard: true)
+                let itemWaterFill=ArrowCellItem(title: "满水动画", icon: "MorePush", targetViewControllerName: "WaterFillViewController",useStoryboard: true)
+                let itemCollectionView=ArrowCellItem(title: "UICollectionView相册", icon: "MorePush", targetViewControllerName: "CollectionViewController")
         
         
                 group2.addCellItem(itemQuartz2D)
@@ -46,6 +53,8 @@ class UICellItems {
                 group2.addCellItem(itemGestureUnlock)
                 group2.addCellItem(itemCoreAnimation)
                 group2.addCellItem(itemTransition)
+                group2.addCellItem(itemWaterFill)
+                group2.addCellItem(itemCollectionView)
                 group2.header="动画"
         
                 self._dataList!.append(group)

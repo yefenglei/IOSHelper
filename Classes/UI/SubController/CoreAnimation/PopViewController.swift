@@ -20,7 +20,7 @@ class PopViewController: UIViewController,UIScrollViewDelegate,UIViewControllerT
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
     
@@ -52,7 +52,7 @@ class PopViewController: UIViewController,UIScrollViewDelegate,UIViewControllerT
             // 设置每个imageview的大小和位置
             imageView.frame=CGRectMake(CGFloat(i) * itemWidth + CGFloat(i+1) * horizontalPadding, 0, itemWidth, itemHeight)
             listView.addSubview(imageView)
-            
+
             // 添加tap手势
             imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("didTapImageView:")))
         }
