@@ -43,6 +43,9 @@ class UICellItems {
                 let itemGestureUnlock=ArrowCellItem(title: "手势解锁", icon: "MorePush", targetViewControllerName: "GestureUnlockViewController",useStoryboard: true)
                 let itemCoreAnimation=ArrowCellItem(title: "核心动画", icon: "MorePush", targetViewControllerName: "CoreAnimationViewController")
                 let itemTransition=ArrowCellItem(title: "自定义过场动画", icon: "MorePush", targetViewControllerName: "PopViewController",useStoryboard: true)
+                // 将功能进行了封装，便于在其他项目中使用
+                let itemCustomTransition=ArrowCellItem(title: "自定义过场动画2", icon: "MorePush", targetViewControllerName: "FirstModalViewController")
+        
                 let itemWaterFill=ArrowCellItem(title: "满水动画", icon: "MorePush", targetViewControllerName: "WaterFillViewController",useStoryboard: true)
                 let itemCollectionView=ArrowCellItem(title: "UICollectionView相册动画", icon: "MorePush", targetViewControllerName: "CollectionViewController")
                 let itemDragScale=ArrowCellItem(title: "图片下拉放大", icon: "MorePush", targetViewControllerName: "DragScalingViewController")
@@ -54,9 +57,11 @@ class UICellItems {
                 group2.addCellItem(itemGestureUnlock)
                 group2.addCellItem(itemCoreAnimation)
                 group2.addCellItem(itemTransition)
+                group2.addCellItem(itemCustomTransition)
                 group2.addCellItem(itemWaterFill)
                 group2.addCellItem(itemCollectionView)
                 group2.addCellItem(itemDragScale)
+        
                 group2.header="动画"
         
                 self._dataList!.append(group)

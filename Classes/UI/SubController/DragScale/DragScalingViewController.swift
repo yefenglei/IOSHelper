@@ -79,6 +79,7 @@ class DragScalingViewController: UITableViewController {
             return
         }
         var frame:CGRect=self.topView.frame
+        //print(self.topView)
         // 放大系数
         let scaleFactor:CGFloat=5
         frame.size.height = TopViewH+down*scaleFactor
