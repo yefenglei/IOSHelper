@@ -39,12 +39,23 @@ class CollectionViewController: UIViewController,UICollectionViewDataSource,UICo
         self.collectionView=collectionView
         
         // 添加样式切换按钮
-        let button=UIButton(frame: CGRectMake(100, 350, 100, 24))
+        let button=UIButton(frame: CGRectMake(20, 350, 80, 24))
         button.setTitle("切换样式", forState: UIControlState.Normal)
         button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         button.addTarget(self, action: Selector("changeStyle:"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         
+        let buttonStack=UIButton(frame: CGRectMake(120, 350, 80, 24))
+        buttonStack.setTitle("堆叠样式", forState: UIControlState.Normal)
+        buttonStack.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        buttonStack.addTarget(self, action: Selector("changeStackStyle:"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(buttonStack)
+        
+        let buttonCircle=UIButton(frame: CGRectMake(220, 350, 80, 24))
+        buttonCircle.setTitle("圆形样式", forState: UIControlState.Normal)
+        buttonCircle.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        buttonCircle.addTarget(self, action: Selector("changeCircleStyle:"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(buttonCircle)
     }
     
     
@@ -55,6 +66,16 @@ class CollectionViewController: UIViewController,UICollectionViewDataSource,UICo
         }else{
             self.collectionView.setCollectionViewLayout(LineLayout(), animated: true)
         }
+    }
+    
+    
+    func changeStackStyle(button:UIButton){
+        self.collectionView.setCollectionViewLayout(StackLayout(), animated: true)
+    }
+    
+    
+    func changeCircleStyle(button:UIButton){
+        self.collectionView.setCollectionViewLayout(CircleLayout(), animated: true)
     }
 
     override func didReceiveMemoryWarning() {

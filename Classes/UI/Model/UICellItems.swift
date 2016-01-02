@@ -44,7 +44,8 @@ class UICellItems {
                 let itemCoreAnimation=ArrowCellItem(title: "核心动画", icon: "MorePush", targetViewControllerName: "CoreAnimationViewController")
                 let itemTransition=ArrowCellItem(title: "自定义过场动画", icon: "MorePush", targetViewControllerName: "PopViewController",useStoryboard: true)
                 let itemWaterFill=ArrowCellItem(title: "满水动画", icon: "MorePush", targetViewControllerName: "WaterFillViewController",useStoryboard: true)
-                let itemCollectionView=ArrowCellItem(title: "UICollectionView相册", icon: "MorePush", targetViewControllerName: "CollectionViewController")
+                let itemCollectionView=ArrowCellItem(title: "UICollectionView相册动画", icon: "MorePush", targetViewControllerName: "CollectionViewController")
+                let itemDragScale=ArrowCellItem(title: "图片下拉放大", icon: "MorePush", targetViewControllerName: "DragScalingViewController")
         
         
                 group2.addCellItem(itemQuartz2D)
@@ -55,6 +56,7 @@ class UICellItems {
                 group2.addCellItem(itemTransition)
                 group2.addCellItem(itemWaterFill)
                 group2.addCellItem(itemCollectionView)
+                group2.addCellItem(itemDragScale)
                 group2.header="动画"
         
                 self._dataList!.append(group)
