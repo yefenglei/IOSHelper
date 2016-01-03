@@ -48,6 +48,8 @@ class UICellItems {
         
                 let itemWaterFill=ArrowCellItem(title: "满水动画", icon: "MorePush", targetViewControllerName: "WaterFillViewController",useStoryboard: true)
                 let itemCollectionView=ArrowCellItem(title: "UICollectionView相册动画", icon: "MorePush", targetViewControllerName: "CollectionViewController")
+                let itemWaterfall=ArrowCellItem(title: "UICollectionView瀑布流布局", icon: "MorePush", targetViewControllerName: "WaterfallViewController")
+        
                 let itemDragScale=ArrowCellItem(title: "图片下拉放大", icon: "MorePush", targetViewControllerName: "DragScalingViewController")
         
         
@@ -60,6 +62,7 @@ class UICellItems {
                 group2.addCellItem(itemCustomTransition)
                 group2.addCellItem(itemWaterFill)
                 group2.addCellItem(itemCollectionView)
+                group2.addCellItem(itemWaterfall)
                 group2.addCellItem(itemDragScale)
         
                 group2.header="动画"
