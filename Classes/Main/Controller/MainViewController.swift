@@ -20,7 +20,9 @@ class MainViewController: UIViewController {
             case "network":
                 vc=NetworkViewController()
                 break
-            case "function":break
+            case "function":
+                vc=FunctionViewController()
+                break
             case "threads":
                 vc=ThreadsViewController()
                 break
@@ -31,11 +33,7 @@ class MainViewController: UIViewController {
         if(vc==nil){
             return
         }
-        if #available(iOS 8.0, *) {
-            self.navigationController?.showViewController(vc!, sender: self)
-        } else {
-            self.navigationController?.pushViewController(vc!, animated: true)
-        }
+        self.navigationController?.showViewController(vc!, sender: self)
     }
 
     override func viewDidLoad() {

@@ -26,12 +26,12 @@ class UnLockView: UIView {
     override func drawRect(rect: CGRect) {
         // Drawing code
         
-        var path:UIBezierPath=UIBezierPath()
+        let path:UIBezierPath=UIBezierPath()
         if(btns.count == 0){
             return
         }
         for i in 0...self.btns.count-1{
-            var btn:UIButton=btns[i]
+            let btn:UIButton=btns[i]
             if(0 == i){
                 path.moveToPoint(btn.center)
             }else{

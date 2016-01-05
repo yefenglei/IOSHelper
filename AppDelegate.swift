@@ -18,12 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 注意: 在iOS8中, 必须提前注册通知类型
-        if #available(iOS 8.0, *){
-            let type:UIUserNotificationType=[UIUserNotificationType.Alert,UIUserNotificationType.Badge,UIUserNotificationType.Sound]
-            let settings=UIUserNotificationSettings(forTypes: type, categories: nil)
-            // 注册通知类型
-            application.registerUserNotificationSettings(settings)
-        }
+        let type:UIUserNotificationType=[UIUserNotificationType.Alert,UIUserNotificationType.Badge,UIUserNotificationType.Sound]
+        let settings=UIUserNotificationSettings(forTypes: type, categories: nil)
+        // 注册通知类型
+        application.registerUserNotificationSettings(settings)
+
         
         return true
     }

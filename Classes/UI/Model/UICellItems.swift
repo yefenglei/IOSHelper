@@ -19,18 +19,12 @@ class UICellItems {
                 let item1=ArrowCellItem(title: "本地通知", icon: "MorePush", targetViewControllerName: "LocalNotificationViewController",useStoryboard: true)
                 let item2=ArrowCellItem(title: "通讯录", icon: "MorePush", targetViewControllerName: "AddressBookViewController",useStoryboard: true)
                 let itemAddressBookUI=ArrowCellItem(title: "AddressBookUI基本使用", icon: "MorePush", targetViewControllerName: "AddressBookUIViewController",useStoryboard: true)
-                let itemRHAddressBook=ArrowCellItem(title: "集成RHAddressBookViewController", icon: "MorePush", targetViewControllerName: "RHAddressBookViewController")
-                let itemQRCode=ArrowCellItem(title: "生成二维码", icon: "MorePush", targetViewControllerName: "QRCodeViewController")
-                let itemSacnQRCode=ArrowCellItem(title: "扫二维码", icon: "MorePush", targetViewControllerName: "ScanQRCodeViewController")
                 let itemPopover=ArrowCellItem(title: "Popover", icon: "MorePush", targetViewControllerName: "PopoverPresentationViewController")
                 let itemAlertView=ArrowCellItem(title: "对话框", icon: "MorePush", targetViewControllerName: "AlertViewController")
         
                 group.addCellItem(item1)
                 group.addCellItem(item2)
                 group.addCellItem(itemAddressBookUI)
-                group.addCellItem(itemRHAddressBook)
-                group.addCellItem(itemQRCode)
-                group.addCellItem(itemSacnQRCode)
                 group.addCellItem(itemPopover)
                 group.addCellItem(itemAlertView)
                 group.header="界面"

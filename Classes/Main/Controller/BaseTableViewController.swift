@@ -84,11 +84,7 @@ class BaseTableViewController: UITableViewController {
                 vc=vcTpye.init()
                 vc.title=arrowCell?.title
             }
-            if #available(iOS 8.0, *) {
-                self.navigationController?.showViewController(vc, sender: self)
-            } else {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+            self.navigationController?.showViewController(vc, sender: self)
         }
     }
     

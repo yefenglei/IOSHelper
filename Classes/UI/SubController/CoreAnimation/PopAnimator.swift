@@ -27,13 +27,9 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
         // 2.获取动画的起始view 和 目的view
         var toView:UIView!
         var fromView:UIView!
-        if #available(iOS 8.0, *) {
-            toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-            fromView=transitionContext.viewForKey(UITransitionContextFromViewKey)!
-        } else {
-            toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view
-            fromView=transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view
-        }
+        toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        fromView=transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        
         // 3.确定哪个view需要执行动画
         let herbView = presenting ? toView:fromView
         // 4.计算初始frame 和 最终frame 以及缩放比例

@@ -37,11 +37,9 @@ class PopoverPresentationViewController: UIViewController {
     
     func popview(btn:UIButton){
         let secondView=SecondPopViewController()
-        if #available(iOS 8.0, *) {
-            secondView.modalPresentationStyle=UIModalPresentationStyle.Popover
-            secondView.popoverPresentationController?.sourceView=btn
-            secondView.popoverPresentationController?.sourceRect=btn.bounds
-        }
+        secondView.modalPresentationStyle=UIModalPresentationStyle.Popover
+        secondView.popoverPresentationController?.sourceView=btn
+        secondView.popoverPresentationController?.sourceRect=btn.bounds
         self.presentViewController(secondView, animated: true, completion: nil)
     }
 

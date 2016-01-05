@@ -19,13 +19,15 @@ class AnimatedTransitioning: NSObject,UIViewControllerAnimatedTransitioning {
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         var toView:UIView?
         var fromView:UIView?
-        if #available(iOS 8.0, *) {
-            toView = transitionContext.viewForKey(UITransitionContextToViewKey)
-            fromView=transitionContext.viewForKey(UITransitionContextFromViewKey)
-        } else {
-            toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view
-            fromView=transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view
-        }
+        toView = transitionContext.viewForKey(UITransitionContextToViewKey)
+        fromView=transitionContext.viewForKey(UITransitionContextFromViewKey)
+//        if #available(iOS 8.0, *) {
+//            toView = transitionContext.viewForKey(UITransitionContextToViewKey)
+//            fromView=transitionContext.viewForKey(UITransitionContextFromViewKey)
+//        } else {
+//            toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view
+//            fromView=transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view
+//        }
         if(self.presented){
             if let tv = toView{
                 tv.x=tv.width
