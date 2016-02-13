@@ -8,9 +8,32 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class NavigationViewController: UINavigationController,UIGestureRecognizerDelegate {
     
     private var _lastVcView:UIImageView?
+    private var recognizer:UIGestureRecognizer!
+    /// 支持手势移除控制器
+    private var _enableGestureMoveController:Bool?
+    var enableGestureMoveController:Bool{
+        get{
+            if(self._enableGestureMoveController==nil){
+                self._enableGestureMoveController=true
+            }
+            return self._enableGestureMoveController!
+        }
+        set{
+            if(newValue==false){
+                // 移除拖拽手势
+                self.recognizer.removeTarget(self, action: "dragging:")
+                self.recognizer=nil
+            }else{
+                // 添加拖拽手势
+                self.recognizer=UIPanGestureRecognizer(target: self, action: Selector("dragging:"))
+                self.view.addGestureRecognizer(self.recognizer)
+            }
+        }
+    }
+    
     var lastVcView:UIImageView!{
         get{
             if(self._lastVcView==nil){
@@ -70,15 +93,20 @@ class NavigationViewController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // 开启手势移除控制器功能，该功能会影响后面的绘图板，手势解锁功能。
+        //self.enableGestureMoveController=true
         
-        // 添加拖拽手势
-        let recognizer=UIPanGestureRecognizer(target: self, action: Selector("dragging:"))
-        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    // MARK: - 手势操作
+    // 开启多手势支持
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
     
     func dragging(recognizer:UIPanGestureRecognizer){
         // 如果只有1个子控制器,停止拖拽
-        if(self.viewControllers.count <= 1){
+        if(self.viewControllers.count <= 1 || enableGestureMoveController == false){
             return
         }
         // 在x方向上移动的距离

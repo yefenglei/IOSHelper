@@ -1,21 +1,29 @@
 //
-//  GestureUnlockViewController.swift
+//  OtherViewController.swift
 //  IOSHelper
 //
-//  Created by 叶锋雷 on 15/12/1.
-//  Copyright © 2015年 叶锋雷. All rights reserved.
+//  Created by 叶锋雷 on 16/1/9.
+//  Copyright © 2016年 叶锋雷. All rights reserved.
 //
 
 import UIKit
 
-class GestureUnlockViewController: UIViewController {
+class OtherViewController: UIViewController {
+    
+    var textF:UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nav=self.navigationController as! NavigationViewController
-        nav.enableGestureMoveController=false
+        self.view.frame=UIScreen.mainScreen().bounds
+        self.view.backgroundColor=UIColor.whiteColor()
         
+        self.textF=UITextView()
+        self.textF.frame=CGRectMake(0, 0, self.view.width, self.view.height)
+        self.textF.text="获取源码  https://github.com/yefenglei/IOSHelper"
+        self.textF.editable=false
+        
+        self.view.addSubview(self.textF)
 
         // Do any additional setup after loading the view.
     }

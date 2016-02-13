@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     
     @IBAction func UIButtonClicked(sender: UIButton) {
         // 跳转到UI tableview
-        var vc:BaseTableViewController?
+        var vc:UIViewController?
         switch(sender.titleLabel!.text!.lowercaseString){
             case "ui":
                 vc=UserInterfaceViewController()
@@ -26,14 +26,19 @@ class MainViewController: UIViewController {
             case "threads":
                 vc=ThreadsViewController()
                 break
-            case "device":break
-            case "more":break
+            case "device":
+                MBProgressHUD.showMessage("尽请期待", duration: 1000)
+                break
+            case "more":
+                vc=OtherViewController()
+                break
             default:break
         }
         if(vc==nil){
             return
         }
         self.navigationController?.showViewController(vc!, sender: self)
+        
     }
 
     override func viewDidLoad() {
